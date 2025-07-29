@@ -13,8 +13,6 @@ A modern, full-stack project scaffold combining:
 
 ## 📐 Architecture Overview
 
-
-
 my_epic_app/
 
 ├── .env                         # 🔐 Environment variables
@@ -70,7 +68,6 @@ my_epic_app/
 ├── test.yml
 
 └── deploy.yml
-
 
 ## 🚀 How to Scaffold a New Project
 
@@ -169,6 +166,22 @@ This template is built with flexibility in mind. You can:
 * Use conditionals in Jinja (`{% if %}`) to toggle features like frontend, tests, CI/CD
 
 ---
+
+
+
+# Setup pre-commit (once)
+
+pip install pre-commit
+pre-commit install
+
+# Run on all files
+
+pre-commit run --all-files
+
+
+---
+
+
 
 ## 🧠 Credits & Inspirations
 
