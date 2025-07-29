@@ -1,1 +1,56 @@
-# pre-commit hooks config
+# .pre-commit-config.yaml
+repos:
+  # Python Formatting and Linting
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.10.0
+    hooks:
+      - id: mypy
+        args: ["--ignore-missing-imports"]
+
+  # Detect secrets in code
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.18.2
+    hooks:
+      - id: gitleaks
+
+  # Remove debug prints
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.11.1
+    hooks:
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: forbid-debug-print
+        name: "Disallow print statements"
+        types: [python]
+
+  # Prevent committing node_modules or .env
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: forbid-binary
+        name: "Block node_modules and .env"
+        files: "(node_modules/|\\.env)"
+
+  # Spellcheck Markdown (optional)
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v6.29.0
+    hooks:
+      - id: cspell
+        args: ["--language-id=markdown", "README.md"]
