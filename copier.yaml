@@ -16,26 +16,26 @@ author_name:
   help: "Author name (used in LICENSE and docs)"
   default: "PyDevIan"
 
-license:
-  type: str
-  help: "Choose your license"
-  choices:
-    - MIT
-    - Apache-2.0
-    - GPL-3.0
-  default: MIT
+# license:
+#   type: str
+#   help: "Choose your license"
+#   choices:
+#     - MIT
+#     - Apache-2.0
+#     - GPL-3.0
+#   default: MIT
 
-include_frontend:
-  type: bool
-  help: "Include frontend React app?"
-  default: true
+# include_frontend:
+#   type: bool
+#   help: "Include frontend React app?"
+#   default: true
 
-include_github_actions:
-  type: bool
-  help: "Include GitHub Actions workflows?"
-  default: true
+# include_github_actions:
+#   type: bool
+#   help: "Include GitHub Actions workflows?"
+#   default: true
 
-docker_support:
-  type: bool
-  help: "Include Docker support (compose + Dockerfiles)?"
-  default: true
+# docker_support:
+#   type: bool
+#   help: "Include Docker support (compose + Dockerfiles)?"
+#   default: true
