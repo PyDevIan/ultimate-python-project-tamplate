@@ -1,1 +1,32 @@
-# Ignore stuff like venv, .env, node_modules
+# Ignore all .txt and .png files (common data or exports)
+*.txt
+*.png
+*.xlsx
+# Ignore environment and secrets files
+.env
+.env.*
+*.env
+config.yaml
+secrets.json
+credentials.json
+*.key
+*.pem
+
+# Ignore cache, build artifacts, logs, and OS files
+__pycache__/
+*.py[cod]
+*.log
+*.cache/
+.cache/
+*.tmp
+build/
+dist/
+*.egg-info/
+
+# Ignore IDE and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+config.py
