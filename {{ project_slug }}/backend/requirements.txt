@@ -1,2 +1,6 @@
 fastapi
 uvicorn
+loguru
+pydantic-settings
+python-dotenv
+pytest

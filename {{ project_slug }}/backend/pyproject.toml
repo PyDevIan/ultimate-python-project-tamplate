@@ -1,2 +1,15 @@
 [project]
 name = '{{ project_slug }}'
+version = "0.1.0"
+description = "Minimal FastAPI backend scaffold with Loguru logging"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "loguru",
+    "pydantic-settings",
+    "python-dotenv"
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
